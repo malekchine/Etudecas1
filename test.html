@@ -1,0 +1,51 @@
+<html>
+<body>
+    <p>Exemple CLICK</p>
+    <button id="mybtn">test le bouton</button>
+    <button id ="p">test 2 button</button>
+    <p>select a classe</p>
+    <select id="select">
+        <option value="2A1">2A1</option>
+        <option value="2A2">2A2</option>
+        <option value="2A3">2A3</option>
+        <option value="2A4">2A4</option>
+
+    </select>
+    <p id="classe"></p>
+    <script>
+        var x =document.getElementById("select");
+        x.addEventListener("change", function() {var value =document.getElementById("select").value;
+            document.getElementById("classe").innerHTML = "tu as selectionnée: " +value;
+        });
+    </script>
+    
+    <form id="form">
+        Entrez votre nom:
+        <input id="nom" type="text" name="fname">
+        <input type="submit" value="Valider">
+    </form>
+    <p id = "paragraph"></p>
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault();
+            var nom = document.getElementById('nom').value;
+            document.getElementById("paragraph").innerHTML ="Welcome " +nom;
+        });
+    </script>
+</body>
+<script>
+    var b = document.getElementById("mybtn");
+    b.addEventListener('click', function() {
+        window.alert('hello world');
+    });
+
+   
+    var p = document.getElementById('p');
+    p.addEventListener('click', function() {
+        window.alert('Clic sur le paragraph');
+    });
+</script>
+
+
+
+</html>
